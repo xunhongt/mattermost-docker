@@ -1,6 +1,6 @@
-./docker/.env
-./docker/volumes
-./docker/data
-./docker/certs
-./docker/docker-compose.override.yml
-./docker/docker-compose.override.yaml
+.env
+volumes
+data
+certs
+docker-compose.override.yml
+docker-compose.override.yaml

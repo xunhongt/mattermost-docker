@@ -6,11 +6,11 @@ Docker Compose setup for Mattermost
 1. Run the following commands after cloning the project. 
 
 ```
-cp ./docker/env.example .docker/.env
+cp env.example .env
 
-mkdir -p ./docker/volumes/app/mattermost/{config,data,logs,plugins,client/plugins,bleve-indexes}
+mkdir -p ./volumes/app/mattermost/{config,data,logs,plugins,client/plugins,bleve-indexes}
 
 sudo chown -R 2000:2000 ./volumes/app/mattermost
 
-docker compose -f docker/docker-compose.yml -f docker/docker-compose.without-nginx.yml up -d
+docker compose -f docker-compose.yml -f docker-compose.without-nginx.yml up -d
 ```
