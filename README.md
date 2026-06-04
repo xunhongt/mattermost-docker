@@ -60,5 +60,5 @@ docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 
 
 #### Search for Channel name & ID
 ```
-docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 1) mmctl channel search --team <team-name> <channel-name>
+docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 1) mmctl --local channel search --team <team-name> <channel-name>
 ```
