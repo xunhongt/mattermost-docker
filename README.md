@@ -14,3 +14,10 @@ sudo chown -R 2000:2000 ./volumes/app/mattermost
 
 docker compose -f docker-compose.yml -f docker-compose.without-nginx.yml up -d
 ```
+
+## Using Mattermost
+
+### Create new user
+```
+docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 1) mmctl --local user create --email user@example.com --username user01 --password '<INSERT_PASSWORD>'
+```
