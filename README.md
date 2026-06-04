@@ -27,3 +27,9 @@ docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 
 docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 1) mmctl --local user delete <EMAIL_ADDRESS>
 ```
 
+
+### Get User ID
+```
+docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 1) mmctl --local user search <EMAIL_ADDRESS>
+```
+
