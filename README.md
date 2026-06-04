@@ -19,5 +19,11 @@ docker compose -f docker-compose.yml -f docker-compose.without-nginx.yml up -d
 
 ### Create new user
 ```
-docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 1) mmctl --local user create --email user@example.com --username user01 --password '<INSERT_PASSWORD>'
+docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 1) mmctl --local user create --email <EMAIL_ADDRESS> --username <USERNAME> --password '<PASSWORD>'
 ```
+
+### Delete user
+```
+docker exec -it $(docker ps --format "{{.Names}}" | grep "mattermost" | head -n 1) mmctl --local user delete --email <EMAIL_ADDRESS>
+```
+
